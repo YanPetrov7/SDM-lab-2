@@ -2,16 +2,17 @@
 
 const isChar = (elem) => {
   if (typeof elem !== "string" || elem.length !== 1) {
-    return `Error: type of '${elem}' is not equal char`;
+    return false;
   }
 };
 
 const isValidIndex = (index, length) => {
-  if (typeof index !== "number") {
-    return `Error: type of '${index}' is not equal number`;
-  }
-  if (index < 0 || index > length) {
-    return `Error: there is no element in array with index: ${index}`;
+  if (
+    typeof index !== "number" ||
+    index < 0 ||
+    (index >= length && index !== 0)
+  ) {
+    throw new Error("Invalid index");
   }
 };
 
@@ -100,3 +101,4 @@ class List {
     this.list = this.list.concat(elems);
   }
 }
+
