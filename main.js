@@ -41,7 +41,7 @@ class List {
   deleteAll(elem) {
     for (let index = 0; index <= this.list.length; index++) {
       if (this.list[index] === elem) {
-        this.list.splice(index, 1);
+        this.list.splice(index, 2);
         index--;
       }
     }
