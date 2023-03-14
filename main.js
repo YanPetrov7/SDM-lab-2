@@ -58,7 +58,7 @@ class List {
     return clonedList;
   }
   reverse() {
-    this.list.reverse();
+    this.list = this.list.reverse();
   }
   findFirst(elem) {
     for (let i = 0; i < this.size(); i++) {
