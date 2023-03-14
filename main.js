@@ -51,7 +51,10 @@ class List {
     return this.list[index];
   }
   clone() {
-    const clonedList = [...this.list];
+    const clonedList = new List();
+    for (const elem of this.list) {
+      clonedList.append(elem);
+    }
     return clonedList;
   }
   reverse() {
