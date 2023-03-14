@@ -24,28 +24,16 @@ class List {
     return this.list.length;
   }
   append(elem) {
-    if (isChar(elem)) {
-      console.log(`append: ${isChar(elem)}`);
-      return;
-    }
+    if (isChar(elem) === false) return;
     this.list.push(elem);
   }
   insert(elem, index) {
-    if (isChar(elem)) {
-      console.log(`insert: ${isChar(elem)}`);
-      return;
-    }
-    if (isValidIndex(index, this.size())) {
-      console.log(`insert: ${isValidIndex(index, this.size())}`);
-      return;
-    }
+    if (isChar(elem) === false) return;
+    isValidIndex(index, this.size());
     this.list.splice(index, 0, elem);
   }
   delete(index) {
-    if (isValidIndex(index, this.size())) {
-      console.log(`delete: ${isValidIndex(index, this.size())}`);
-      return;
-    }
+    isValidIndex(index, this.size());
     const elem = this.list[index];
     this.list.splice(index, 1);
     return elem;
@@ -59,10 +47,7 @@ class List {
     }
   }
   get(index) {
-    if (isValidIndex(index, this.size())) {
-      console.log(`get: ${isValidIndex(index, this.size())}`);
-      return;
-    }
+    isValidIndex(index, this.size());
     return this.list[index];
   }
   clone() {
