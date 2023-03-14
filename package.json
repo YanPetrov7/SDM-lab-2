@@ -1,0 +1,22 @@
+{
+  "name": "sdm-lab-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YanPetrov7/SDM-lab-2.git"
+  },
+  "author": "YanPetrov7",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YanPetrov7/SDM-lab-2/issues"
+  },
+  "homepage": "https://github.com/YanPetrov7/SDM-lab-2/issues",
+  "dependencies": {
+    "jest": "^29.5.0"
+  }
+}
