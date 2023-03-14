@@ -80,13 +80,7 @@ class List {
     this.list.length = 0;
   }
   extend(elems) {
-    for (const elem of elems) {
-      if (isChar(elem)) {
-        console.log(`extend: ${isChar(elem)}`);
-        return;
-      }
-    }
-    this.list = this.list.concat(elems);
+    this.list = this.list.concat(elems.list);
   }
 }
 
